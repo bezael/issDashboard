@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'issDashboard';
+  title = 'ISS Dashboard';
+  alertName: string;
+
+  public alert(e) {
+    this.alertName = e.name;
+  }
 }

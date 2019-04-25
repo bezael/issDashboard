@@ -1,13 +1,16 @@
+<div class="alert" *ngIf="alertName">
+  <h1>WARNING!! High Temperature Reported for {{alertName}}!</h1>
+</div>
 <div class="container">
 
-  <h1>Ground Control</h1>
-  <h3>ISS Dashboard</h3>
+  <h1>Fancy ISS Dashboard</h1>
 
   <iss-temperature-gauge
     unit="fahrenheit"
     station-component="discombobulator"
     width="300"
     height="500"
+    (hiTemp)="alert($event)"
   ></iss-temperature-gauge>
 
 </div>
