@@ -82,7 +82,7 @@ export class TemperatureGaugeComponent implements OnInit {
       if (storedUnit !== 'fahrenheit') {
         convertedTemp = this.convertToFahrenheit(temp);
       }
-      if (convertedTemp >= 80) {
+      if (convertedTemp >= 100) {
         this.hiTemp.emit(this.currentTemp[0]);
       } else {
         this.hiTemp.emit(false);
