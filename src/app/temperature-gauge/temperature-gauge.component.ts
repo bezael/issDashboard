@@ -59,9 +59,9 @@ export class TemperatureGaugeComponent implements OnInit {
 
   public getScaleMin(): number {
     if (this.unit === 'celsius') {
-      return -60;
+      return -10;
     } else {
-      return -100;
+      return -20;
     }
   }
 
