@@ -1,4 +1,7 @@
-<h1 [ngClass]="{'alert': (hiTemp | async)}">Current Temp: {{ currentTempDisplay }}</h1>
+<div [ngClass]="{'alert': (hiTemp | async)}" class="header">
+  <h1>Current Temp</h1>
+  <h2>{{ currentTempDisplay }} {{ unitToDisplay }}</h2>
+</div>
 <div class="temp-gauge">
   <ngx-charts-bar-vertical
     [view]="view"

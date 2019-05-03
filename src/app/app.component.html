@@ -3,14 +3,16 @@
 </div>
 <div class="container">
 
-  <h1>Fancy ISS Dashboard</h1>
+  <h1>I Am Just A Normal Angular Dashboard App</h1>
 
-  <iss-temperature-gauge
-    unit="fahrenheit"
-    station-component="discombobulator"
-    width="300"
-    height="500"
-    (hiTemp)="alert($event)"
-  ></iss-temperature-gauge>
+  <mat-card class="my-flex-mat-card">
+    <iss-temperature-gauge
+      unit="fahrenheit"
+      station-component="discombobulator"
+      width="300"
+      height="500"
+      (hiTemp)="alert($event)"
+    ></iss-temperature-gauge>
+  </mat-card>
 
 </div>

@@ -10,12 +10,11 @@ export class TemperatureGaugeComponent implements OnInit {
 
   @Input() public unit = 'fahrenheit';
   @Input() public stationComponent = 'discombubulator';
-  @Input() public width = 300;
-  @Input() public height = 500;
   @Output() public hiTemp = new EventEmitter();
 
   public currentTemp: any[];
   public currentTempDisplay: string;
+  public unitToDisplay: string;
   public view: any[];
   public showXAxis = true;
   public showYAxis = true;
@@ -35,7 +34,7 @@ export class TemperatureGaugeComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.view = [this.width, this.height];
+    this.view = [300, 500];
     this.firestoreService.createDocument(this.stationComponent, this.unit);
     this.firestoreService.currentTemp.subscribe(
       (item) => {
@@ -44,6 +43,7 @@ export class TemperatureGaugeComponent implements OnInit {
           value: this.getCalculatedTemp(item.value, item.name)
         }];
         this.currentTempDisplay = this.currentTemp[0].value;
+        this.unitToDisplay = this.titleCase(this.unit);
         this.yAxisLabel = `Degrees in ${this.titleCase(this.unit)}`;
       }
     );

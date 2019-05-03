@@ -9,6 +9,7 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { MatCardModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
     BrowserAnimationsModule,
     NgxChartsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    MatCardModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]

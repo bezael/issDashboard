@@ -1,9 +1,13 @@
-h1 {
+.header {
   text-align: center;
   color: #ffffff;
   background-color: #3CB371;
   margin: 0;
-  padding: 20px;
+  padding: 20px 0px;
+
+  h1, h2 {
+    margin: 0;
+  }
 
   &.alert {
     background-color: #b71c1c;
@@ -14,9 +18,14 @@ h1 {
   background-color: #fff;
   border: 1px solid #999999;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 342px;
+  height: 648px;
 }
 
 .temp-gauge {
   display: flex;
-  padding: 20px;
+  padding: 20px 0px;
+  background-color: #fff;
 }
