@@ -1,4 +1,4 @@
-<div class="alert" *ngIf="alertName">
+<div class="alert" *ngIf="hasAlert">
   <h1>WARNING!! High Temperature Reported for {{alertName}}!</h1>
 </div>
 <div class="container">
@@ -9,8 +9,6 @@
     <iss-temperature-gauge
       unit="fahrenheit"
       station-component="discombobulator"
-      width="300"
-      height="500"
       (hiTemp)="alert($event)"
     ></iss-temperature-gauge>
   </mat-card>

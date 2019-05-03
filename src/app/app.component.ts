@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'ISS Dashboard';
   alertName: string;
+  hasAlert = false;
 
   public alert(e) {
+    this.hasAlert = e.alert;
     this.alertName = e.name;
   }
 }
